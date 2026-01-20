@@ -1,0 +1,68 @@
+/* ChatWindow.css */
+.chatwindow {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+/* Hide scrollbar track for a cleaner look */
+.chatwindow::-webkit-scrollbar {
+  width: 6px;
+}
+.chatwindow::-webkit-scrollbar-thumb {
+  background: #373737;
+  border-radius: 10px;
+}
+
+.messages-list {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+/* User Message: Aligned Right with a Bubble */
+.user-row {
+  justify-content: flex-end;
+}
+
+.user-row .message-bubble {
+  background-color: #343541; /* Dark grey bubble */
+  color: #ececec;
+  padding: 12px 20px;
+  border-radius: 18px;
+  border-bottom-right-radius: 4px; /* Stylish "tail" */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Assistant Message: Aligned Left, no bubble (clean look) */
+.assistant-row {
+  justify-content: flex-start;
+}
+
+.assistant-row .message-bubble {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+.message-bubble p {
+  margin: 0;
+}
+
+/* Ensure the assistant text feels smooth as it grows */
+.assistant-row .message-bubble {
+  transition: all 0.1s ease-in-out;
+}

@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box; /* Includes padding in height calculation */
+}
+
+/* Reset and Layout Fixes */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Stops the whole page from scrolling */
+  background-color: #212121;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Chat side takes up remaining width */
+/* App.css snippet */
+.chatside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* This is the key to stopping the "uplift" */
+  overflow: hidden;
+  background-color: #212121;
+}
+
+.main-header {
+  flex-shrink: 0; /* Prevents the header from collapsing */
+  height: 60px;
+  z-index: 100;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #333;
+}
+
+.model-name {
+  color: #19c37d;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Landing Page Styling */
+.landing-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #171717;
+}
+
+.login-card {
+  background: #212121;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: center;
+  width: 320px;
+  color: white;
+}
+
+.premium-login-btn {
+  background-color: #19c37d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Updated CSS for a clean, box-less loader */
+.typing-bubble {
+  background-color: transparent !important; /* Removes the box color */
+  padding: 10px 0 !important; /* Keeps spacing without the box */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  box-shadow: none !important; /* Ensures no shadow remains */
+}
+
+/* Keep the dot animation exactly as it was */
+.dot-flashing {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #ececec;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+  margin-left: 15px; /* Adds space for the left dot */
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: #ececec;
+  animation: dot-flashing 1s infinite linear alternate;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  animation-delay: 0s;
+}
+.dot-flashing::after {
+  left: 15px;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #ececec;
+  }
+  50%,
+  100% {
+    background-color: rgba(236, 236, 236, 0.2);
+  }
+}

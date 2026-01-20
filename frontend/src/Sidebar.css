@@ -1,0 +1,133 @@
+/* --- Base Desktop Styles --- */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  flex-shrink: 0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+  overflow: hidden;
+  border-right: 1px solid #2f2f2f;
+  z-index: 1000;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  width: 68px;
+  padding: 12px 0;
+}
+
+.mobile-menu-btn,
+.mobile-only-close {
+  display: none;
+}
+
+/* --- Mobile Responsive Rules --- */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    transform: translateX(0); /* Open state */
+    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: none;
+  }
+
+  .mobile-menu-btn,
+  .mobile-only-close {
+    display: block;
+  }
+
+  .desktop-only-toggle {
+    display: none;
+  }
+
+  /* Backdrop dimming */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    backdrop-filter: blur(4px);
+  }
+
+  .chatside {
+    width: 100%;
+  }
+}
+
+/* --- Existing List Styles --- */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.history {
+  flex: 1;
+  overflow-y: auto;
+}
+.history-label {
+  font-size: 0.7rem;
+  color: #676767;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 24px 0 12px 12px;
+}
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+.history li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #ececec;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+.history li:hover {
+  background-color: #212121;
+}
+.history li.active {
+  background-color: #2f2f2f;
+  font-weight: 600;
+}
+.history li span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scrollbar */
+.history::-webkit-scrollbar {
+  width: 4px;
+}
+.history::-webkit-scrollbar-thumb {
+  background: #373737;
+  border-radius: 10px;
+}

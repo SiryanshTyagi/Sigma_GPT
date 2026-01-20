@@ -1,0 +1,51 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* FORCES text to go below the form */
+  align-items: center; /* Centers the input bar horizontally */
+  padding: 0 20px 15px 20px;
+  background-color: #212121; /* Matches the chat background */
+  width: 100%;
+}
+
+.custom-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 10px; /* Vertical padding for multiline comfort */
+  font-family: inherit; /* Textareas don't inherit font by default */
+  resize: none; /* Hides the bottom-right drag handle */
+  max-height: 200px; /* Prevents the bar from getting too tall */
+  overflow-y: auto; /* Adds scrollbar inside the bar if text is huge */
+}
+
+.custom-input::-webkit-scrollbar {
+  display: none;
+}
+
+/* Adjust the form to align items to the bottom so icons stay pinned 
+   even when the text area grows taller */
+.input-form {
+  display: flex;
+  align-items: center; /* Sigma move: aligns icons to bottom of a multiline bar */
+  width: 100%;
+  max-width: 800px;
+  background-color: #2f2f2f;
+  border: 1.5px solid #424242;
+  border-radius: 26px;
+  padding: 6px 12px;
+}
+
+.input-form:focus-within {
+  border-color: #676767;
+}
+
+.footer-text {
+  color: #b4b4b4;
+  font-size: 0.75rem;
+  margin-top: 12px;
+  text-align: center;
+}
