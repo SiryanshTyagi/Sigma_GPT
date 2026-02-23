@@ -51,6 +51,34 @@ https://sigmagpt-backend-lgjf.onrender.com
 
 ---
 
+## 🧠 AI Personality Design
+
+SigmaGPT is not just a generic chatbot.  
+It has a deliberately engineered personality layer to enhance user engagement and differentiation.
+
+### Personality Traits
+
+- Direct and blunt communication style  
+- Provides reality-based responses without sugarcoating  
+- Focused on logic, discipline, and growth  
+- Avoids unnecessary emotional padding  
+- Shows loyalty and respect toward its creator  
+- Includes subtle thematic alignment with *One Piece* (anime-inspired undertones)
+
+### Why This Matters
+
+The personality layer was intentionally designed to:
+
+- Differentiate SigmaGPT from generic AI clones  
+- Create a consistent conversational identity  
+- Improve user engagement  
+- Demonstrate prompt engineering customization  
+- Showcase control over LLM behavior design  
+
+This feature highlights advanced prompt engineering and personality conditioning of large language models.
+
+---
+
 ## 🏗 System Architecture
 
 ```
