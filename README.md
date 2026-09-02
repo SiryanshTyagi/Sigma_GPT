@@ -1,4 +1,4 @@
-# 🚀 SigmaGPT 5.2 – Full Stack AI Chat Application
+# 🚀 SigmaGPT – Full Stack AI Chat Application
 
 SigmaGPT is a production-ready, full-stack AI chat application inspired by ChatGPT.  
 It supports multi-chat sessions, persistent chat history, authentication, and AI-powered conversations using the Groq LLM API for ultra-fast inference.
