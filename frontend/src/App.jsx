@@ -170,7 +170,7 @@ function App() {
               </IconButton>
             </div>
 
-            <span className="model-name">SIGMA GPT 5.2</span>
+            <span className="model-name">SIGMA GPT </span>
             <div className="user-profile">
               <UserButton afterSignOutUrl="/" />
             </div>
